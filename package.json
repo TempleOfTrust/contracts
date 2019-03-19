@@ -1,0 +1,30 @@
+{
+  "name": "tot-solidity",
+  "version": "1.0.0",
+  "description": "Temple of Trust: Solidity code",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TempleOfTrust/contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TempleOfTrust/contracts/issues"
+  },
+  "homepage": "https://github.com/TempleOfTrust/contracts#readme",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.2.0",
+    "truffle-hdwallet-provider": "^1.0.0-web3one.5"
+  },
+  "devDependencies": {
+    "any-promise": "^1.3.0",
+    "bindings": "^1.5.0"
+  }
+}
