@@ -9,6 +9,7 @@ pragma solidity ^0.5.2;
 import "openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
+import './Strings.sol';
 
 
 contract OwnableDelegateProxy {}
@@ -23,6 +24,7 @@ contract ProxyRegistry {
  */
 contract TradeableERC721Token is ERC721Full, Ownable {
     using SafeMath for uint256;
+    using Strings for string;
 
     uint256 burnedCounter = 0;
     address proxyRegistryAddress;
@@ -74,7 +76,10 @@ contract TradeableERC721Token is ERC721Full, Ownable {
     }
 
     function tokenURI(uint256 _tokenId) public view returns (string memory) {
-        return string(abi.encodePacked(baseTokenURI(), _tokenId));
+        return Strings.strConcat(
+            baseTokenURI(),
+            Strings.uint2str(_tokenId)
+        );
     }
 
     /**

@@ -19,4 +19,7 @@ module.exports = async function (deployer, network, accounts) {
     await totInstance.mintTo(accounts[0]);
     console.log('Minted one to owner');
 
+    await totInstance.mintTo(accounts[0]);
+    console.log('Minted one to owner');
+
 }
